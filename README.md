@@ -1,5 +1,7 @@
 # UmbrellaExample
 
+**Done**
+
 * Single Elixir app
 * Two Elixir apps
 * Reference other Elixir project
@@ -14,4 +16,7 @@
 * Second Elixir app with just Ecto models & migrations
 * Run both migrations from umbrella mix
 * Share config between apps
+
+**TODO**
+
 * Use Docker
