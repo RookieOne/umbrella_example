@@ -2,7 +2,9 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-config :has_routes, ecto_repos: []
+config :other_ecto, ecto_repos: [OtherEcto.Repo]
+
+import_config "#{Mix.env}.exs"
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
@@ -12,11 +14,11 @@ config :has_routes, ecto_repos: []
 
 # You can configure for your application as:
 #
-#     config :has_routes, key: :value
+#     config :other_ecto, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:has_routes, :key)
+#     Application.get_env(:other_ecto, :key)
 #
 # Or configure a 3rd-party app:
 #

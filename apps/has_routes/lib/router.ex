@@ -9,5 +9,6 @@ defmodule HasRoutes.Router do
     pipe_through :api
     get "/hello", MessageController, :hello
     resources "/members", MembersController, only: [:index, :create]
+    resources "/groups", GroupsController, only: [:index, :create]
   end
 end
