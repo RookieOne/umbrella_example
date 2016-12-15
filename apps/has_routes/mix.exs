@@ -9,6 +9,7 @@ defmodule HasRoutes.Mixfile do
      deps_path: "../../deps",
      lockfile: "../../mix.lock",
      elixir: "~> 1.3",
+     compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -18,7 +19,7 @@ defmodule HasRoutes.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :phoenix]]
   end
 
   # Dependencies can be Hex packages:
@@ -36,6 +37,7 @@ defmodule HasRoutes.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
+      {:just_ecto, in_umbrella: true},
       {:phoenix, "~> 1.2.1"}
     ]
   end
