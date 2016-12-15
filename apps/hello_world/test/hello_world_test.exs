@@ -5,4 +5,7 @@ defmodule HelloWorldTest do
   test "the truth" do
     assert 1 + 1 == 2
   end
+  test "message" do
+    assert HelloWorld.message == "Hello World"
+  end
 end

@@ -35,6 +35,8 @@ defmodule HowdyWorld.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:hello_world, in_umbrella: true}
+    ]
   end
 end
