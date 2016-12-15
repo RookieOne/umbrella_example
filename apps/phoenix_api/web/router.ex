@@ -22,6 +22,7 @@ defmodule PhoenixApi.Router do
   scope "/api", PhoenixApi.Api do
     pipe_through :api
     get "/howdy", MessageController, :howdy
+    resources "/members", MembersController, only: [:index, :create]
   end
 
   forward "/other", HasRoutes.Router
