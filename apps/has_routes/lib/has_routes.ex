@@ -1,0 +1,2 @@
+defmodule HasRoutes do
+end

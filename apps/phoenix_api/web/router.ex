@@ -24,6 +24,8 @@ defmodule PhoenixApi.Router do
     get "/howdy", MessageController, :howdy
   end
 
+  forward "/other", HasRoutes.Router
+
   # Other scopes may use custom stacks.
   # scope "/api", PhoenixApi do
   #   pipe_through :api

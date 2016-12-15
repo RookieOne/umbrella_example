@@ -37,6 +37,7 @@ defmodule PhoenixApi.Mixfile do
     [
       {:cowboy, "~> 1.0"},
       {:gettext, "~> 0.11"},
+      {:has_routes, in_umbrella: true},
       {:howdy_world, in_umbrella: true},
       {:phoenix, "~> 1.2.1"},
       {:phoenix_ecto, "~> 3.0"},
