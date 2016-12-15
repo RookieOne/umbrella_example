@@ -19,6 +19,11 @@ defmodule PhoenixApi.Router do
     get "/", PageController, :index
   end
 
+  scope "/api", PhoenixApi.Api do
+    pipe_through :api
+    get "/howdy", MessageController, :howdy
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", PhoenixApi do
   #   pipe_through :api
